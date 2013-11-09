@@ -1,0 +1,7 @@
+<div>
+	<%= simple_form_for @translate, url: translate_path do |f| %>
+	<%= f.input :message, placeholder: "What would you like to say?", as: :text, input_html: {rows: 10} %>
+	<%= f.button :submit, class: 'btn btn-primary', value: "Send" %>
+
+	<% end %>
+</div>

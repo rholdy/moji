@@ -99,6 +99,8 @@ GEM
     multi_json (1.8.2)
     pg (0.17.0)
     polyglot (0.3.3)
+    powder (0.2.0)
+      thor (>= 0.11.5)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -183,6 +185,7 @@ DEPENDENCIES
   minitest-spec-rails
   minitest-wscolor
   pg
+  powder
   quiet_assets
   rails (= 3.2.14)
   rails_layout
