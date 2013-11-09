@@ -1,4 +1,8 @@
+<div class="output" >
+
 <p>
   <b>Message:</b>
-  <%= @translate.message %>
+  <%#=  @translate.to_emoji.map{|emoji| emojify(emoji) }.join('').html_safe %>
+  <%= @translate.convert %>
 </p>
+</div>
