@@ -3,7 +3,7 @@ class Translate < ActiveRecord::Base
 
  def to_emoji
  	emoji_message = []
- 	message.downcase.each_char do |m|
+ 	message.each_char do |m|
  		codepoint = (self.convert_hash[m])
     emoji_message << [codepoint.to_i(16)].pack("U*")
     end
