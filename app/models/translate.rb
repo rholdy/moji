@@ -4,7 +4,7 @@ class Translate < ActiveRecord::Base
  def to_emoji
  	emoji_message = []
  	message.downcase.each_char do |m|
- 		codepoint = '1f'.concat(self.convert_hash[m.to_sym])
+ 		codepoint = (self.convert_hash[m])
     emoji_message << [codepoint.to_i(16)].pack("U*")
     end
  	emoji_message.join
@@ -13,8 +13,8 @@ class Translate < ActiveRecord::Base
 def to_english
 	english_message = []
 	message.each_char do |m|
-		hex = m.codepoints.first.to_s(16).gsub('1f', '')
-		english_message << self.convert_hash.invert[hex].to_s
+		hex = m.codepoints.first.to_s(16)
+		english_message << self.convert_hash.invert[hex.upcase].to_s
 	end
 	english_message.join
 end
@@ -28,15 +28,10 @@ def convert
 
 end
 
-
 def convert_hash
-{a: '601',
-b: '602',
-c: '603',
-d: '604',
-e: '605',
-f: '606'}
+YAML.load(File.open(Rails.root.join("map.yml")))['map']
 end
+
 
 
 end
