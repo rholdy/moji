@@ -13,7 +13,7 @@ gem 'figaro'
 gem 'pg'
 gem 'simple_form'
 gem 'unicorn'
-gem 'gemoji'
+
 
 group :development do
   gem 'better_errors'
