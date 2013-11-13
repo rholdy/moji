@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 		if @translate.save
 			redirect_to show_message_path(@translate), notice: "IT WORKED!"
 		else
-	      flash.now.alert = "Please correct the errors below"
+	      flash.now.alert = "Please correct the following: #{@translate.errors.full_messages.join(', ')}"
 	      render :new
     end
 	end

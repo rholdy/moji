@@ -11,6 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+ body { 
+   padding-bottom: 70px;
+    
+}
+
 .content {
   background-color: #eee;
   padding: 20px;
@@ -25,6 +31,7 @@
 
 .output {
 	font-family: 'Arial Unicode MS';
+  font-size: 5em;
 
 }
 
@@ -34,13 +41,20 @@
 
 }
 
+.main {
+ font-size: 3em;
+
+}
+
 .page-header {
    width: 40%;
+   font-size: 1.5em;
 
 }
 
 .message-form {
-  width: 40%;
+  width: 33%;
+  font-size: 1.5em;
 
 }
 
@@ -48,3 +62,5 @@
   width: 40%;
 
 }
+
+
