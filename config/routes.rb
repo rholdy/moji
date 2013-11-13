@@ -1,8 +1,7 @@
 Moji::Application.routes.draw do
-  root :to => "home#index"
+  root :to => "home#new"
 
-  get "translate", to: "translate#new", as: :translate
   get "message/:id", to: "home#show", as: :show_message
-  post "translate", to: "translate#create", as: :translate
+  post "translate", to: "home#create", as: :translate
 
 end
