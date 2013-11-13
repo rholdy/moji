@@ -29,7 +29,7 @@ def convert
 end
 
 def convert_hash
-YAML.load(File.open(Rails.root.join("map.yml")))['map']
+  YAML.load(File.open(Rails.root.join("map.yml")))['map']
 end
 
 
